@@ -16,7 +16,7 @@ module.exports = function(app) {
     const search ={
       facultyId: req.body.facultyId
     }
-    if(!isEmpty(coursesExists)){
+    if(isEmpty(coursesExists)){
       return res.status(400).send('Could not get courses because list is empty');
     }
     try{
